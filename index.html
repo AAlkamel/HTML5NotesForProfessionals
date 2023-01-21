@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="max-width: 80%;margin: 0 auto;">
+    <div>
+      <h2>
+        Chapter 1 - 6:
+      </h2>
+      <br>
+      <br>
+
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+      <br>
+      <br>
+      <h2 id="Topic1">First topic</h2>
+      <p>
+        Here is some content from an article that contains the
+        <mark>searched query</mark>
+        that we are looking for. Highlighting the text will make it easier for the user to
+        find what they are looking for.
+        <br>
+        <br>
+        <strong>Bold Text Here with strong</strong>
+        <br>
+        <br>
+        <strong>Bold Text Here with b</strong>
+        <br>
+        <br>
+        <em>Italicized Text Here with em</em>
+        <br>
+        <br>
+        <i>Italicized Text Here with i</i>
+      </p>
+      <p>This paragraph contains some <u>mispelled</u> text.</p>
+      <p>I like to write <abbr title="Hypertext Markup Language">HTML</abbr>!</p>
+      <p>
+        Here is some content from an article that contains the
+        <ins>New Text inserted</ins>
+        <del>Deleted Text</del>
+        <s>Struck-through text here</s>
+        that we are looking for<sup>sup</sup>. Highlighting the text will make it easier for the user to
+        find what they are looking for<sub>sub</sub>.
+      </p>
+      <br>
+      <br>
+
+      <h2 id="Topic2">Second topic</h2>
+      <a href="http://example.com/">Link to example.com</a>
+      <br>
+      <br>
+      <p>To denote that this link leads to an external website, you can use the external link type: </p>
+      <a href="http://example.com/" rel="external">example site</a>
+      <br>
+      <br>
+      <p>You can link to a site that uses a protocol other than HTTP. For example, to link to an FTP site, you can do
+      </p>
+      <a href="ftp://example.com/">This could be a link to a FTP site</a>
+      <br>
+      <h1>Table of Contents</h1>
+      <a href='#Topic1'>Click to jump to the First Topic</a>
+      <br>
+      <a href='#Topic2'>Click to jump to the Second Topic</a>
+      <br>
+      <p>
+        These anchors are also attached to the web page they're on (page1.html). So you can link across the site from
+        one
+        page to the other by referencing the page and anchor name.
+        Remember, you can always <a href="page1.html#Topic1">look back in the First Topic</a> for
+        supporting information.
+      </p>
+      <p>
+        If the value of the href-attribute begins with tel:, your device will dial the number when you click it. This
+        works on
+        mobile devices or on computers/tablets running software – like Skype or FaceTime – that can make phone calls.
+        GoalKicker.com – HTML5 Notes for Professionals 13
+        <br>
+        <a href="tel:11234567890">Call us</a>
+      </p>
+      <br>
+      <br>
+      <p>
+        The target attribute Specifies where to open the link, e.g. in a new tab or window. Possible values are
+        <br>
+        _blank,
+        <a href="example.com" target="_blank">_blank</a>
+        <br>
+        _self,
+        <a href="example.com" target="_self">_self</a>
+        <br>
+        _parent,
+        <a href="example.com" target="_parent">_parent</a>
+        <br>
+        _top,
+        <a href="example.com" target="_top">_top</a>
+        <br>
+        and framename (deprecated). Forcing such behaviour is not recommended since it
+        violates the control of the user over a website.
+        <br>
+        <a href="example.com" target="popup" onclick="window.open('example.com','name','width=600,height=400')">Open
+          page
+          in new window</a>
+      </p>
+      <br>
+      <br>
+      <h3>: Link that runs JavaScript</h3>
+      <p>
+        Simply use the javascript: protocol to run the text as JavaScript instead of opening it as a normal link:
+        <br>
+        <a class="jsfun" href="javascript:myFunction();">Run Code</a>
+        <br>
+        You can also achieve the same thing using the onclick attribute:
+        <!-- <a class="jsfun" href="#" onclick="myFunction();">Run Code</a> -->
+        <br>
+        <b>Should you be using any of this?</b>
+        <br>
+        The answer is almost certainly no. Running JavaScript inline with the element like this is fairly bad
+        practice. Consider using pure JavaScript solutions that look for the element in the page and bind a
+        function to it instead. Listening for an event
+        Also consider whether this element is really a button instead of a link. If so, you should use button
+      </p>
+      <br>
+      <br>
+      <h3>Link that runs email client</h3>
+      <a href="mailto:alkamilahmed80@gmail.com">Send email</a>
+    </div>
+    <hr>
+    <hr>
+    <!-- Chapter 7: lists -->
+    <div>
+      <h2>Chapter 7: Lists</h2>
+      <h3>Ordered List</h3>
+      <ol>
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+      </ol>
+      <p> set a starting number, using the start attribute</p>
+      <ol start="5">
+        <li>Item</li>
+        <li>Some Other Item</li>
+        <li>Yet Another Item</li>
+      </ol>
+      <p> set a starting number, using the start attribute and here add value attribute to li</p>
+      <ol start="5">
+        <li>Item</li>
+        <li>Some Other Item</li>
+        <li value="1">Yet Another Item <i>here add value attribute to li</i> </li>
+        <li>Item</li>
+        <li>Some Other Item</li>
+        <li>Yet Another Item</li>
+      </ol>
+      <p>You can reverse the numbering by adding reversed in your ol element:</p>
+      <ol reversed>
+        <li>Item</li>
+        <li>Some Other Item</li>
+        <li>Yet Another Item</li>
+        <li>Item</li>
+        <li>Some Other Item</li>
+        <li>Yet Another Item</li>
+        <li>Item</li>
+        <li>Some Other Item</li>
+        <li>Yet Another Item</li>
+      </ol>
+      <p>You can reverse the numbering by adding reversed in your ol element: with value attribute</p>
+      <ol reversed>
+        <li>Item</li>
+        <li>Some Other Item</li>
+        <li>Yet Another Item</li>
+        <li value="1">Item here added value attribute</li>
+        <li>Some Other Item</li>
+        <li>Yet Another Item</li>
+        <li>Item</li>
+        <li>Some Other Item</li>
+        <li>Yet Another Item</li>
+      </ol>
+      <p>
+        <b>Changing the type of numeral</b>
+        <br>
+        You can easily change the type of numeral shown in the list item marker by using the type attribute
+        <br>
+        type="1|a|A|i|I"
+      </p>
+      <p>type='1'</p>
+      <ol type="1">
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+      </ol>
+      <p>type='a'</p>
+      <ol type="a">
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+      </ol>
+      <p>type='A'</p>
+      <ol type="A">
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+      </ol>
+      <p>type='i'</p>
+      <ol type="i">
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+      </ol>
+      <p>type='I'</p>
+      <ol type="I">
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+      </ol>
+      <br>
+      <br>
+      <h3>Unordered List</h3>
+      <ul>
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+      </ul>
+      <br>
+      <h3>Nested lists</h3>
+      <ul>
+        <li>Item</li>
+        <li>
+          Another Item
+          <ul>
+            <li>Item</li>
+            <li>Another Item</li>
+            <li>Yet Another Item
+              <ol>
+                <li>Item</li>
+                <li>Another Item</li>
+                <li>Yet Another Item</li>
+              </ol>
+            </li>
+          </ul>
+        </li>
+        <li>Yet Another Item</li>
+      </ul>
+      <br>
+      <h3>Description List</h3>
+      <p>
+        A description list (or definition list, as it was called before HTML5) can be created with the dl element. It
+        consists of
+        name-value groups, where the name is given in the dt element, and the value is given in the dd element
+      </p>
+      <dl>
+        <dt>name 1</dt>
+        <dd>value for 1</dd>
+        <dt>name 2</dt>
+        <dd>value for 2</dd>
+      </dl>
+      <br>
+      <p>A name-value group can have more than one name and/or more than one value (which represent alternatives):</p>
+      <dl>
+        <dt>name 1</dt>
+        <dt>name 2</dt>
+        <dd>value for 1 and 2</dd>
+        <dt>name 3</dt>
+        <dd>value for 3</dd>
+        <dd>value for 3</dd>
+      </dl>
+    </div>
+    <hr>
+    <hr>
+    <!-- Chapter 8: Tables -->
+    <div>
+      <h2>Chapter 8: Tables</h2>
+      <h3>Simple Table</h3>
+      <table>
+        <tr>
+          <th>Heading 1/Column 1</th>
+          <th>Heading 2/Column 2</th>
+        </tr>
+        <tr>
+          <td>Row 1 Data Column 1</td>
+          <td>Row 1 Data Column 2</td>
+        </tr>
+        <tr>
+          <td>Row 2 Data Column 1</td>
+          <td>Row 2 Data Column 2</td>
+        </tr>
+      </table>
+      <h3>Spanning columns or rows</h3>
+      <table>
+        <tr>
+          <td>row 1 col 1</td>
+          <td>row 1 col 2</td>
+          <td>row 1 col 3</td>
+        </tr>
+        <tr>
+          <td colspan="3">This second row spans all three columns</td>
+        </tr>
+        <tr>
+          <td rowspan="2">This cell spans two rows</td>
+          <td>row 3 col 2</td>
+          <td>row 3 col 3</td>
+        </tr>
+        <tr>
+          <td>row 4 col 2</td>
+          <td>row 4 col 3</td>
+        </tr>
+      </table>
+      <h3>Table with thead, tbody, tfoot, and caption</h3>
+      <table>
+        <caption>Table Title</caption> <!--| caption is the first child of table |-->
+        <thead> <!--======================| thead is after caption |-->
+          <tr>
+            <th>Header content 1</th>
+            <th>Header content 2</th>
+            <th>Header content 3</th>
+            <th>Header content 4</th>
+          </tr>
+        </thead>
+        <tbody> <!--======================| tbody is after thead |-->
+          <tr>
+            <td>Body content 1</td>
+            <td>Body content 2</td>
+            <td>Body content 3</td>
+            <td>Body content 4</td>
+          </tr>
+        </tbody>
+        <tfoot><!--| tfoot can be placed before or after tbody, but not in a group of tbody. |-->
+          <!--| Regardless where tfoot is in markup, it is rendered at the bottom. |-->
+          <tr>
+            <td>Footer content 1</td>
+            <td>Footer content 2</td>
+            <td>Footer content 3</td>
+            <td>Footer content 4</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+  <script src="./js.js"></script>
+</body>
+
+</html>
