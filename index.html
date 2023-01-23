@@ -5,12 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="refresh" content="20"> -->
+  <!-- <meta http-equiv="refresh" content="5;url=https://www.example.com/" /> -->
+  <!-- <meta name="mobile-web-app-capable" content="yes"> -->
+  <meta name="theme-color" content="black">
+
   <title>Document</title>
 </head>
 
 <body>
   <div style="max-width: 80%;margin: 0 auto;">
-    <div>
+    <div tabindex="0">
       <h2>
         Chapter 1 - 6:
       </h2>
@@ -139,7 +144,7 @@
     <hr>
     <hr>
     <!-- Chapter 7: lists -->
-    <div>
+    <div tabindex="1">
       <h2>Chapter 7: Lists</h2>
       <h3>Ordered List</h3>
       <ol>
@@ -359,6 +364,325 @@
           </tr>
         </tfoot>
       </table>
+    </div>
+    <div>
+      <a href="https://www.google.com/">
+        <img sizes="(min-width: 1200px) 580px,
+        (min-width: 640px) 48vw,
+        98vw" srcset="
+              https://picsum.photos/seed/picsum/300/400 300w,
+              https://picsum.photos/seed/picsum/600/400 600w,
+              https://picsum.photos/seed/picsum/900/400 900w,
+              https://picsum.photos/seed/picsum/1200/400 1200w" alt="google">
+      </a>
+      <br>
+      <picture>
+        <source media="(min-width: 600px)" srcset="https://picsum.photos/id/870/400/300?grayscale&blur=2">
+        <source media="(min-width: 450px)" srcset="https://picsum.photos/id/800/200/300?grayscale&blur=2">
+        <img src="https://picsum.photos/id/890/200/300?grayscale&blur=2" style="width:auto;">
+      </picture>
+      <img src="http://jaced.com/blogpix/2007/trisquarecircle/002.gif" usemap="#shapes">
+      <map name="shapes">
+        <area shape="polygon" coords="79,6,5,134,153,134">
+        <area shape="rectangle" coords="177,6,306,134">
+        <area shape="circle" coords="397,71,65">
+      </map>
+      <br>
+      <br>
+    </div>
+    <h2>inputs</h2>
+    <form action="">
+      <input type="text">
+      <br>
+      <input type="text" size="50">
+      <br>
+      <br>
+      <fieldset>
+        <legend>Theme single color:</legend>
+        <p>
+          <input type="radio" name="color" id="red" value="#F00">
+          <label for="red">Red</label>
+        </p>
+        <p>
+          <input type="radio" name="color" id="green" value="#0F0">
+          <label for="green">Green</label>
+        </p>
+        <p>
+          <input type="radio" name="color" id="blue" value="#00F">
+          <label for="blue">Blue</label>
+        </p>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Theme multi color:</legend>
+        <p>
+          <input type="checkbox" name="red" id="red-checkbox" value="#F00">
+          <label for="red-checkbox">Red</label>
+        </p>
+        <p>
+          <input type="checkbox" name="green" id="green-checkbox" value="#0F0">
+          <label for="green-checkbox">Green</label>
+        </p>
+        <p>
+          <input type="checkbox" name="blue" id="blue-checkbox" value="#00F">
+          <label for="blue-checkbox">Blue</label>
+        </p>
+      </fieldset>
+      <br>
+      <br>
+      <input type="range" size="2" name="feedback" min="1" max="5" />
+      <input pattern="\d*" title="Numbers only, please.">
+      <br>
+      <br>
+      <input type="file" accept="image/*" title="Only images are allowed">
+      <br>
+      <br>
+      <input type="file" accept="image/*,.rar,application/zip">
+    </form>
+    <br>
+    <br>
+    <hr tabindex="3">
+    <form>
+      <fieldset>
+        <legend>form validation test:</legend>
+        <input type="text" name="name" required>
+        <br>
+        <br>
+        <input type="email" name="email" required>
+        <br>
+        <br>
+        <input pattern="\d*" name="number" required>
+        <br>
+        <br>
+        <input type="color" name="favcolor" value="#ff0000">
+        <br>
+        <br>
+        <input type="password" name="password" placeholder="*****">
+        <br>
+        <br>
+        <input type="date">
+        <br>
+        <input type="datetime">
+        <br>
+        <input type="datetime-local">
+        <br>
+        <input type="month">
+        <br>
+        <input type="reset">
+        <br>
+        <input type="search">
+        <br>
+        <input type="time">
+        <br>
+        <input type="url">
+        <br>
+        <input type="week">
+        <br>
+        <br>
+        <input type="reset" value="reset">
+        <input type="button" onclick="alert('hello world!')" value="Click Me">
+        <button type="button" onclick="alert('hello world!')">Click Me</button>
+        <!-- ///////////////////////////// -->
+        <br>
+        <br>
+        <input type="submit" value="Publish"> <!-- form will be validated -->
+        <br>
+        <br>
+        <input type="submit" value="Save" formnovalidate> <!-- form will NOT be validated -->
+      </fieldset>
+    </form>
+    <br>
+    <br>
+    <br>
+    <form action="upload_file.php" method="post" enctype="multipart/form-data">
+      Select file to upload:
+      <input type="image" src="img.png" alt="image_name" height="50px" width="50px" />
+      <input type="file" name="fileSubmission" id="fileSubmission">
+      <input type="submit" value="Upload your file" name="submit">
+    </form>
+    <form action="">
+      <fieldset>
+        <p><label>Meeting time: <input type=datetime name="meeting.start"></label>
+      </fieldset>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+      <h3>Audio</h3>
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+      <br>
+      <br>
+      <br>
+      <h3>video</h3>
+      <video width="500" height="700" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+      <br>
+      <br>
+      <br>
+      </video>
+      <!-- Simple video example -->
+      <video width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif">
+        <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm">
+        <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/mp4">
+        <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg">
+        Your browser doesn't support HTML5 video tag.
+      </video>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+      <select multiple>
+        <option value="option1" selected>Some option</option>
+        <option value="option2" selected>Some option</option>
+      </select>
+      <br>
+      <br>
+      <select>
+        <option value="option1" selected>Some option</option>
+        <option value="option2" selected>Some option</option>
+      </select>
+      <br>
+      <br>
+      <select name="">
+        <option value="milk">Milk</option>
+        <optgroup label="Fruits">
+          <option value="banana">Bananas</option>
+          <option value="strawberry">Strawberries</option>
+        </optgroup>
+        <optgroup label="Vegetables" disabled>
+          <option value="carrot">Carrots</option>
+          <option value="zucchini">Zucchini</option>
+        </optgroup>
+      </select>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h3>Datalist</h3>
+      <input list="Languages">
+      <datalist id="Languages">
+        <option value="PHP">
+        <option value="Perl">
+        <option value="Python">
+        <option value="Ruby">
+        <option value="C+">
+      </datalist>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+      <h3>iframe</h3>
+      <iframe width="600" height="300" src="https://caniuse.com/input-pattern"></iframe>
+      <h3>iframe sendbox</h3>
+      <!-- <iframe sandbox="" width="600" height="300" src="https://caniuse.com/input-pattern"></iframe> -->
+      <h3>iframe sendbox allow-scripts allow-forms allow-same-origin allow-top-navigation</h3>
+      <!-- <iframe sandbox="allow-scripts allow-forms allow-same-origin allow-top-navigation" width="600" height="300" src="https://caniuse.com/input-pattern"></iframe> -->
+      <h3>iframe Using the "srcdoc" Attribute</h3>
+      <iframe srcdoc="<p>IFrames are cool!</p>"></iframe>
+      <br>
+      <br>
+      <h3>Using Anchors with IFrames</h3>
+      <iframe src="https://caniuse.com/input-pattern" name="myIframe"></iframe>
+      <a href="page1.html" target="myIframe">Change the Iframe content to
+        different_webpage.html</a>
+    </div>
+    <div>
+      <br>
+      <br>
+      <br>
+      <h2>SVG</h2>
+      <svg style="fill: red;width: 50px;height: 50px;" class="attention" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+        <path id="attention" d="m571,767l0,-106q0,-8,-5,-13t-12,-5l-108,0q-7,0,-12,5t-5,13l0,106q0,8,5,13t12,6l108,0q7,0,12,-6t5
+          ,-13Zm-1,-208l10,-257q0,-6,-5,-10q-7,-6,-14,-6l-122,0q-7,0,-14,6q-5,4,-5,12l9,255q0,5,6,9t13,3l103,
+          0q8,0,13,-3t6,-9Zm-7,-522l428,786q20,35,-1,70q-10,17,-26,26t-35,10l-858,0q-18,0,-35,-10t-26,-26q-21
+          ,-35,-1,-70l429,-786q9,-17,26,-27t36,-10t36,10t27,27Z" />
+      </svg>
+
+    </div>
+    <div>
+      <h2>Canvas</h2>
+      <canvas id="myCanvas">
+        Cannot display graphic. Canvas is not supported by your browser (IE < 9) </canvas>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div style="max-width: 80%;margin: 0 auto;">
+    <div>
+      <h2> Marking up computer code</h2>
+      <pre>
+        <code>
+        x = 42
+        if x == 42:
+        print "x is … … 42"
+        </code>
+      </pre>
+      <br>
+      <pre>
+        <code>
+        &lt;p>This is a paragraph.&lt;/p>
+        </code>
+      </pre>
+      <h2>Marking-up Quotes</h2>
+      <p>She wrote <q>The answer is 42.</q> and everyone agreed.</p>
+      <p>She wrote <q cite="http://example.com/blog/hello-world">The answer is 42.</q> and everyone
+        agreed.</p>
+      <blockquote>
+        <p>The answer is 42.</p>
+      </blockquote>
+      <blockquote cite="http://example.com/blog/hello-world">
+        <p>The answer is 42.</p>
+      </blockquote>
+      <p>Source: <cite><a href="http://example.com/blog/hello-world" rel="external">Hello
+            World</a></cite></p>
+
+    </div>
+    <div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h3 contenteditable="">Contenteditable Attribute</h3>
+      <p contenteditable>This is an editable paragraph.</p>
+      <p contenteditable>
+        This is an editable paragraph.
+        <span contenteditable="false">But not this.</span>
+      </p>
+      <br>
+      <br>
+      <div contextmenu="mymenu">
+        <h3>contextmenu</h3>
+
+        <menu type="context" id="mymenu">
+          <menuitem label="Refresh">
+          </menuitem>
+          <menuitem label="Twitter">
+          </menuitem>
+        </menu>
+
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+      <div role="alert" aria-live="assertive">Your session will expire in 60 seconds.</div>
+    </div>
+    <div role="alertdialog">
+      <h1>Warning</h1>
+      <div role="alert">Your session will expire in 60 seconds.</div>
     </div>
   </div>
 
